@@ -1,0 +1,28 @@
+CENÁRIOS DE TESTES
+
+Dado que o localhost:8080 esteja acessando a tela de cadastro
+
+-> Preenchimento dos Campos
+TC001 - Não deve aceitar número no preenchimento do campo "Nome completo"; OK
+TC002 - Deve Aceitar Letras No Preenchimento Do Campo "Nome Completo"; OK
+TC003 - Não deve aceitar menos de 11 digitos no preenchimento do campo "CPF"; OK
+TC004 - Não deve aceitar mais de 11 digitos no preenchimento do campo "CPF"; OK
+TC005 - Deve Auto-Formatar Os Numeros No Preenchimento Correto Do Campo "CPF"; OK
+TC006 - Não deve aceitar menos de 11 digitos no preenchimento do campo "Celular" OK
+TC007 - Não deve aceitar mais de 11 digitos no preenchimento do campo "Celular" OK
+TC008 - Deve Auto-Formatar Os Numeros No Preenchimento Correto Do Campo Celular; OK
+TC009 - Não deve aceitar letras no preenchimento do campo "Data de nascimento"; OK
+TC010 - Deve Aceitar números no preenchimento correto do campo data;
+TC011 -
+
+Não deve aceitar cadastro sem preenchimento do campo "Data de Nascimento"
+Não deve aceitar cadastro sem preenchimento do campo "Nome completo"
+- Não deve aceitar cadastro sem preenchimento do campo "CPF"
+
+
+Não deve aceitar cadastro sem preenchimento do campo "Celular"
+
+
+Deve salvar dados cadastrados ao pressionar o botão "Salvar"
+ Deve Excluir todos os usuários ao pressionar botão "Excluir todos os usuários"
+Deve aceitar apenas letras no campo de busca.
