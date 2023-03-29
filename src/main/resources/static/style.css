@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
+
+:root {
+    --fonte-primaria:  'Anton', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: azure;
+    
+}
+
+.header {
+    padding: 5% 0% 0% 10%;
+    background-color: #181823;
+}
+
+.page__title {
+    font-size: 50px;
+    color: #181823;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
+    text-align: center;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    font-size: 40px;
+    color: #181823;
+    font-family: var(--fonte-primaria);
+    text-align: center;
+}
+
+.subtitle__2 {
+    font-size: 30px;
+    color: #181823;
+    font-family: var(--fonte-primaria);
+    text-align:left;
+}
+
+.icone {
+    display: flexbox;
+    align-items: center;
+    gap: 4px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    
+
+}
+
+.form-group {
+    font-weight: bold;
+}
+
+input {
+    writing-mode:horizontal-tb;
+    font-weight:bold;
+    color:#181823;
+}
+
+.btn {
+    float: right;
+}
+
+.btn-primary {
+    background-color: #181823;
+    border-color: #181823; 
+    padding: 8px 30px;
+    font-family: var(--fonte-secundaria);
+    margin: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #537FE7;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 2;
+    font-weight:100;
+    color:black;
+    font-family: var(--fonte-secundaria);
+    background-color: rgb(255, 255, 255);
+    background-clip: padding-box;
+    border: 1px solid #181823;
+    border-radius: 0.15rem;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.btn-danger {
+    font-family: var(--fonte-secundaria);
+    float: right;
+    padding: 8px 30px;
+    margin: 10px;
+    
+}
+
+.btn-danger:hover {
+    background-color: #d62020;
+    color:#FAFAFA;
+}
+
+a:not([href]):not([tabindex]) {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.container {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+th {
+    font-family: var(--fonte-secundaria);
+    color:#181823;
+}
+
+td {
+    font-family: var(--fonte-secundaria);
+}
+
+.footer {
+    background-color: #181823;
+    color: azure; 
+    padding: 10px;
+    text-align: center;
+}

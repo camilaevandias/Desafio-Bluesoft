@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+        <title>Cadastro</title>
+    </head>
+
+    <body>
+        <header class="header">
+        </header>
+            <br>
+            <h1 class="page__title">Cadastro de Usuários</h1>
+            <br><br>
+            <div id="app" class="container">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input v-model="usuario.nome" type="text" class="form-control" id="nome"  maxlength="80"  required="true" placeholder="Nome">                      
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input v-model="usuario.cpf" type="text" class="form-control" id="cpf"  maxlength="14"  required="true" requiredMessage= "Informe o CPF" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input v-model="usuario.celular" type="text" class="form-control" id="celular" maxlength="14" required="true" requiredMessage= "Informe o Celular" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="dt-nascimento">Data de Nascimento</label>
+                        <input v-model="usuario.dataNascimento" type="date" class="form-control" id="dt-nascimento" maxlength="10" required="true" requiredMessage= "Informe a data de nascimento" placeholder=" DD/MM/AAAA">
+                    </div>
+                    <button v-on:click="salvar" id="btn-salvar" class="btn btn-primary">Salvar</button>
+                </form>
+                <br><br><br><br>
+
+                <h1 class="subtitle">Pesquisa de Usuários <img src="./Assets/lupa.webp" alt="Lupa" class="icone"> </h1>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <input v-model="search" type="text" class="form-control" id="input-search"  placeholder="Digite o nome">
+                    </div>
+                    <button v-on:click="buscarPorNome" class="btn btn-primary"> Buscar</button>
+                </form>
+                <br><br><br>
+
+                <h1 class="subtitle__2">Resultados</h1>
+                <br>
+                <table id="tabela-usuarios" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Celular</th>
+                            <th scope="col">Data de Nascimento</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr v-for="usuario in usuarios" :key="usuario.id">
+                            <td>{{ usuario.nome }}</td>
+                            <td>{{ usuario.cpf }}</td>
+                            <td>{{ usuario.celular }}</td>
+                            <td>{{ usuario.dataNascimento }} data</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button v-on:click="editar" id="btn-editar" class="btn btn-primary">Editar</button>
+                <a v-on:click="excluirTodosUsuarios" class="btn  btn-danger">Excluir todos os usuários</a>
+            </div>
+            <br><br><br><br>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="main.js"></script>
+            <script src="./form-user.js"></script>
+
+
+
+        <footer class="footer">
+            <p>Desafio BlueSoft</p>
+        </footer>
+    </body>
+</html>
